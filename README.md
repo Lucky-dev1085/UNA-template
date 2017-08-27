@@ -2,7 +2,7 @@
 
 This module contains sample template module which can be easily renamed and used as bootstrap of your own UNA template and shows examples of some basic things.
 
-Custom templates can change different things in base template and add own features. If it's enough to change just some colors and backgrounds, you can use "Styles" in Protean or Decorous template, for more advanced changes it's better to create own template. It possible for example to change representation of menu in custom template, like it's done in Decorous template.
+Custom templates can change different things in base template and add own features. If it's enough to change just some colors and backgrounds, you can use "Styles" in [Protean](https://una.io/page/view-product?id=3) or [Decorous](https://una.io/page/view-product?id=81) template, for more advanced changes it's better to create own template. It possible for example to change representation of menu in custom template, like it's done in Decorous template.
 
 When developing a template module it's recommended to turn off the following settings in Studio > Settings > System > Cache:
 - Enable Page cache
