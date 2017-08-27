@@ -11,7 +11,7 @@ When developing a template module it's recommended to turn off the following set
 
 It's recommended to use build-in into browsers "Inspector" to check existing styles of the page.
 
-Template module structure 
+## Template module structure 
 
 Structure of template module is the same as other modules(link?), but with addition of `data/template` folder. This folders consists of the following subfolders:
 - `system` - system template files, it consists of overridden files from `/template/`folder
@@ -26,17 +26,17 @@ Each of these folders has structure like this:
 
 Files in these folders usually have the name which represents it's purpose, but there are some of files which has special meaning.
 
-Special CSS files:
+** Special CSS files: **
 - `common.css` - common styles which are used in user's frontend interface and Studio backend.
 - `default.less` - default classes, such as default paddings, marginns, avatar sizes, etc.
 - `general.css` - general styles for the user's frontend, such as toolbar, logo, footer, etc styles.
 - `media-(desktop|phone|print|tablet).css` - styles which are used on the particular size of the screen or viewing mode, which usually represents some type of device.
 
-Special scripts:
+** Special scripts: **
 - `BxBaseConfig.php` - templates config with LESS variables and other configs and helper methods
 - `BxBaseFunctions.php` - general functions which are used in different places on the site, such as message box, popup, time/date displaying.
 
-Special HTML files:
+** Special HTML files: **
 - `_header.html`, `_footer.html` - all pages header and footer without design
 - `_sub_header.html`, `_sub_footer.html` - all pages header and footer with some design, like menus, toolbar, etc
 - `layout_*.html` - pages layouts
@@ -56,17 +56,18 @@ Special HTML files:
 	- `44` - popup page, without any headers and footers
 	- `150` - transition page with redirect to display some msg, like 'please wait', without headers footers
 
-Module renaming
+## Module renaming
 
 To use this module you need to rename it to your own. You need to think of how you name your template module and your name and your company name also know as vendor. 
 
-You can use search and replace in PHP, XML and SQL files in the following order to clone module just in minutes, keep in mind that it's case sensitive and you can use letters and number only. Note that full vendor name and module name in lower case are path to your module.
+You can use search and replace in PHP, XML and SQL files to clone module just in minutes, keep in mind that it's case sensitive and you can use letters and number only. Note that full vendor name and module name in lower case are path to your module.
 
-You need replace :
+You need replace:
 - `vnd` - with your own short vendor name
 - `vendor` - with your own full vendor name
 - `modulename` - with your own module name
 
+In the following order:
 1. `co_flowers` to `vnd_modulename`
 2. `CoFlowers` to `VndModulename`
 3. `Flowers` to `Modulename`
@@ -75,7 +76,7 @@ You need replace :
 6. `company` to `vendor`
 
 
-Overriding CSS files
+## Overriding CSS files
 
 For example we need to change color of the toolbar. Using browser Inspector we identified that it is `#bx-toolbar` style in `/template/css/general.css` file. According to this we need to add `data/template/system/css/general.css` file in our template folder with the following contents:
 ```
@@ -87,7 +88,7 @@ For example we need to change color of the toolbar. Using browser Inspector we i
 ```
 In above code we've imported original file first, then we've overridden color of the toolbar. All other styles wasn't changes, as the result less changes will be required when base template will be changed.
 
-Override images which are referring from CSS 
+## Override images which are referring from CSS 
 
 For example we need to change default cover image in our template. We've identified that it's cover.jpg file in `/template/images/` folder, then placed our custom image into `data/template/system/images/cover.jpg`, but nothing changed. This is because images referring from CSS need changes in CSS styles. By checking again we've found that reference to this image is from `/template/css/cover.css` file and `.bx-cover-wrapper` class. Then we need to add own `cover.css` file into `data/template/system/css/` folder with the following contents:
 ```
@@ -99,7 +100,7 @@ For example we need to change default cover image in our template. We've identif
 ```
 It refers to the original file as well, then adds custom styles. It should work now.
 
-Overriding LESS files
+## Overriding LESS files
 
 Some of CSS files are in LESS format and you can override particular styles as well. Let's assume that we want to add round avatars all over the site, we've identified that this styles is in `.bx-def-thumb` class in some strange `cache_public/lessphp_1098aabb777f7121e987846ecb65c69a9fb12fcc.css` file. This is compiled LESS file. LESS files can't be read directly by the browser, so they are always compiled to CSS. It makes it a bit difficult to find particular place to change, so we've tried to use LESS format for a few files only. Now we need to use search by `.bx-def-thumb` in `/template/css/` folder to see where it's defined, and found it in `template/css/default.less` file. As the result we need to add custom `default.less` file into `data/template/system/css/` folder with the following contents:
 ```
