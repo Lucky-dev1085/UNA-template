@@ -14,7 +14,7 @@ It's recommended to use build-in into browsers "Inspector" to check existing sty
 
 ## Template module structure 
 
-Structure of template module is the same as other modules(link?), but with addition of `data/template` folder. This folders consists of the following subfolders:
+Structure of template module is the same as [other modules structure](https://github.com/unaio/una/wiki/Directories-structure#module-structure), but with addition of `data/template` folder. This folders consists of the following subfolders:
 - `system` - system template files, it consists of overridden files from `/template/`folder
 - `studio` - template files, there are overridden files from `/studo/template/`
 - `vendor_modulename` - particular modules template files (instead of `vendor` and `modulename` should be real values), for the files which can be overridden refer to the particular module folder, for example `/modules/vendor/modulename/template`
