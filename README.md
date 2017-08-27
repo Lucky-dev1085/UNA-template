@@ -64,9 +64,9 @@ To use this module you need to rename it to your own. You need to think of how y
 You can use search and replace in PHP, XML and SQL files to clone module just in minutes, keep in mind that it's case sensitive and you can use letters and number only. Note that full vendor name and module name in lower case are path to your module.
 
 Change to your own:
-- `vnd` - with your own short vendor name
-- `vendor` - with your own full vendor name
-- `modulename` - with your own module name
+- `vnd` - to your own short vendor name
+- `vendor` - to your own full vendor name
+- `modulename` - to your own module name
 
 In the following order:
 1. `co_flowers` to `vnd_modulename`
