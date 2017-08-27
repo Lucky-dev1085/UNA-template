@@ -59,7 +59,7 @@ Files in these folders usually have the name which represents it's purpose, but 
 
 ## Module renaming
 
-To use this module you need to rename it to your own. You need to think of how you name your template module and your name and your company name also know as vendor. 
+To use this module you need to rename it to your own. You need to think of how you name your template module and your company name also know as vendor. 
 
 You can use search and replace in PHP, XML and SQL files to clone module just in minutes, keep in mind that it's case sensitive and you can use letters and number only. Note that full vendor name and module name in lower case are path to your module.
 
