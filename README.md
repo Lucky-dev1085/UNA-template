@@ -80,7 +80,7 @@ In the following order:
 ## Overriding CSS files
 
 For example we need to change color of the toolbar. Using browser Inspector we identified that it is `#bx-toolbar` style in `/template/css/general.css` file. According to this we need to add `data/template/system/css/general.css` file in our template folder with the following contents:
-```
+```css
 @import url(../../../../../../../template/css/general.css);
 
 #bx-toolbar {    
@@ -92,7 +92,7 @@ In above code we've imported original file first, then we've overridden color of
 ## Override images which are referring from CSS 
 
 For example we need to change default cover image in our template. We've identified that it's cover.jpg file in `/template/images/` folder, then placed our custom image into `data/template/system/images/cover.jpg`, but nothing changed. This is because images referring from CSS need changes in CSS styles. By checking again we've found that reference to this image is from `/template/css/cover.css` file and `.bx-cover-wrapper` class. Then we need to add own `cover.css` file into `data/template/system/css/` folder with the following contents:
-```
+```css
 @import url(../../../../../../../template/css/cover.css);
 
 .bx-cover-wrapper {
@@ -104,7 +104,7 @@ It refers to the original file as well, then adds custom styles. It should work 
 ## Overriding LESS files
 
 Some of CSS files are in LESS format and you can override particular styles as well. Let's assume that we want to add round avatars all over the site, we've identified that this styles is in `.bx-def-thumb` class in some strange `cache_public/lessphp_1098aabb777f7121e987846ecb65c69a9fb12fcc.css` file. This is compiled LESS file. LESS files can't be read directly by the browser, so they are always compiled to CSS. It makes it a bit difficult to find particular place to change, so we've tried to use LESS format for a few files only. Now we need to use search by `.bx-def-thumb` in `/template/css/` folder to see where it's defined, and found it in `template/css/default.less` file. As the result we need to add custom `default.less` file into `data/template/system/css/` folder with the following contents:
-```
+```less
 @import '../../../../../../../template/css/default.less';
 
 .bx-def-ava,
