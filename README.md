@@ -23,7 +23,7 @@ Each of these folders has structure like this:
 - Root folder consists of overridden .html templates.
 - `css` - Overridden CSS files. Each file must refer to the parent file and contain only overridden CSS classes and styles. It can be LESS files there, if parent class is LESS file as well. No need to place CSS file there if no styles are changed - then original css file will be used automatically.
 - `images` - Overridden or own images. Not all images can be overridden. To override file which is referring from CSS, you need to override particular CSS class.
-- `scripts` - Template classes with overridden methods. In contrast with other folders this folder has all possible files by default, but they don't add/change any styles by default. You can add methods to these existing classes by referring to original source code of the class, for example to see all possible methods of `BxTemplFormView` file in `system` folder, you need to refer to `/template/scripts/BxBaseFormView` file.
+- `scripts` - Template classes with overridden methods. In contrast with other folders this folder has all possible files by default, but they don't add/change any styles by default. You can add methods to these existing classes, for the list of possible methods refer to original source code of the class, for example to see all possible methods of `BxTemplFormView` file in `system` folder, you need to open `/template/scripts/BxBaseFormView` file.
 
 Files in these folders usually have the name which represents it's purpose, but there are some of files which has special meaning.
 
