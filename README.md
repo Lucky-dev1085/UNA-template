@@ -27,17 +27,17 @@ Each of these folders has structure like this:
 
 Files in these folders usually have the name which represents it's purpose, but there are some of files which has special meaning.
 
-** Special CSS files: **
+**Special CSS files:**
 - `common.css` - common styles which are used in user's frontend interface and Studio backend.
 - `default.less` - default classes, such as default paddings, marginns, avatar sizes, etc.
 - `general.css` - general styles for the user's frontend, such as toolbar, logo, footer, etc styles.
 - `media-(desktop|phone|print|tablet).css` - styles which are used on the particular size of the screen or viewing mode, which usually represents some type of device.
 
-** Special scripts: **
+**Special scripts:**
 - `BxBaseConfig.php` - templates config with LESS variables and other configs and helper methods
 - `BxBaseFunctions.php` - general functions which are used in different places on the site, such as message box, popup, time/date displaying.
 
-** Special HTML files: **
+**Special HTML files:**
 - `_header.html`, `_footer.html` - all pages header and footer without design
 - `_sub_header.html`, `_sub_footer.html` - all pages header and footer with some design, like menus, toolbar, etc
 - `layout_*.html` - pages layouts
