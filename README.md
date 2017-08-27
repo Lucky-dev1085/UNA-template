@@ -84,7 +84,7 @@ For example we need to change color of the toolbar. Using browser Inspector we i
 @import url(../../../../../../../template/css/general.css);
 
 #bx-toolbar {    
-	background-color: #a05da5;
+    background-color: #a05da5;
 }
 ```
 In above code we've imported original file first, then we've overridden color of the toolbar. All other styles wasn't changes, as the result less changes will be required when base template will be changed.
