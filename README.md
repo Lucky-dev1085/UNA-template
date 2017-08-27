@@ -116,7 +116,7 @@ Some of CSS files are in LESS format and you can override particular styles as w
 ```
 First we've imported parent LESS file, very similar to CSS import and then added custom styles for different sizes of user avatar representation, we've found other classes for avatar in original `default.less` file.
 
-Overriding LESS variables which are defined out of LESS files
+## Overriding LESS variables which are defined out of LESS files
 
 Some LESS variables are defined on the backend, so it can be changed via interface in other templates. To override these values we need to make changes in `data/template/system/scripts/BxTemplConfig.php` file.
 
