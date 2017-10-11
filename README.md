@@ -12,6 +12,8 @@ When developing a template module it's recommended to turn off the following set
 
 It's recommended to use build-in into browsers "Inspector" to check existing styles of the page.
 
+Please refer to [Common Interface Elements](https://una.io/samples/interface.php) page for general CSS styles you can use.
+
 ## Template module structure 
 
 Structure of template module is the same as [other modules structure](https://github.com/unaio/una/wiki/Directories-structure#module-structure), but with addition of `data/template` folder. This folders consists of the following subfolders:
